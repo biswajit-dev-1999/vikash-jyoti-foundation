@@ -1,37 +1,58 @@
-import type { Metadata } from "next";
+"use client";
+
+// Remove this line since metadata can't be used in Client Components
+// import type { Metadata } from "next";
+
+import { useState } from "react";
 import ProgramCard from "@/components/cards/ProgramCard";
 import CTASection from "@/components/sections/CTASection";
 import { programs } from "@/data";
 import { Sparkles, Target, Heart } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Our Programs",
-  description:
-    "Explore Vikas Jyoti Foundation's programs in healthcare, disability support, rural development, women empowerment, and education.",
-};
+// You can still set page title using useEffect or next/head
+// Or use a custom hook for SEO
 
 const approachItems = [
   {
     icon: Target,
     title: "Community-Driven",
     desc: "We begin every program with extensive community consultation to understand real needs and co-design solutions with the people we serve.",
-    bg: "linear-gradient(135deg,#16a34a,#22c55e)",
+    gradientClass: "from-green-600 to-green-400",
   },
   {
     icon: Sparkles,
     title: "Evidence-Based",
     desc: "All our interventions are grounded in research and best practices, with regular monitoring and evaluation to ensure effectiveness.",
-    bg: "linear-gradient(135deg,#0d9488,#16a34a)",
+    gradientClass: "from-teal-700 to-green-600",
   },
   {
     icon: Heart,
     title: "Holistic Support",
     desc: "We address the interconnected challenges communities face — from health and education to livelihood and social rights.",
-    bg: "linear-gradient(135deg,#059669,#10b981)",
+    gradientClass: "from-teal-600 to-green-500",
   },
 ];
 
+// Define categories based on program titles
+const CATEGORIES = ["All", "Healthcare", "Disability", "Rural", "Women & Child", "Education"];
+
+// Map program titles to categories
+const getProgramCategory = (title: string): string => {
+  if (title.includes("Healthcare")) return "Healthcare";
+  if (title.includes("Disability")) return "Disability";
+  if (title.includes("Rural")) return "Rural";
+  if (title.includes("Women")) return "Women & Child";
+  if (title.includes("Education")) return "Education";
+  return "Other";
+};
+
 export default function ProgramsPage() {
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+  
+  const filteredPrograms = activeCategory === "All"
+    ? programs
+    : programs.filter(p => getProgramCategory(p.title) === activeCategory);
+
   return (
     <>
       <style>{`
@@ -84,9 +105,55 @@ export default function ProgramsPage() {
           margin: 0 auto;
         }
 
+        /* ── Category Filter ── */
+        .filter-section {
+          padding: 1.5rem 0 0;
+          background: #fff;
+        }
+        .filter-inner {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 1.25rem;
+        }
+        @media (min-width: 640px)  { .filter-inner { padding: 0 1.5rem; } }
+        @media (min-width: 1024px) { .filter-inner { padding: 0 2rem; } }
+        .filter-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.75rem;
+          padding: 1rem 0;
+        }
+        .filter-btn {
+          padding: 0.5rem 1.25rem;
+          border-radius: 9999px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          border: 1px solid #e2e8f0;
+          background: #fff;
+          color: #374151;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        .filter-btn:hover {
+          border-color: #22c55e;
+          background: #f0fdf4;
+          color: #15803d;
+        }
+        .filter-btn-active {
+          background: #16a34a;
+          border-color: #16a34a;
+          color: #fff;
+        }
+        .filter-btn-active:hover {
+          background: #15803d;
+          border-color: #15803d;
+          color: #fff;
+        }
+
         /* ── Programs Grid ── */
         .prog-grid-section {
-          padding: 4.5rem 0;
+          padding: 2.5rem 0 4.5rem;
           background: #fff;
         }
         .prog-grid-inner {
@@ -102,6 +169,13 @@ export default function ProgramsPage() {
         }
         @media (min-width: 640px)  { .prog-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1024px) { .prog-grid { grid-template-columns: repeat(3, 1fr); } }
+        
+        .no-results {
+          text-align: center;
+          padding: 3rem;
+          color: #6b7280;
+          font-size: 1rem;
+        }
 
         /* ── Approach ── */
         .approach-section {
@@ -218,21 +292,44 @@ export default function ProgramsPage() {
         </div>
       </section>
 
+      {/* Category Filter Buttons */}
+      <section className="filter-section">
+        <div className="filter-inner">
+          <div className="filter-buttons">
+            {CATEGORIES.map((category) => (
+              <button
+                key={category}
+                className={`filter-btn ${activeCategory === category ? "filter-btn-active" : ""}`}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Focus Area quick badges */}
-      <div className="focus-banner">
+      {/* <div className="focus-banner">
         {["Healthcare & Awareness", "Disability Support", "Rural Development", "Women & Child Welfare", "Education & Upliftment"].map((f) => (
           <div key={f} className="focus-badge">{f}</div>
         ))}
-      </div>
+      </div> */}
 
       {/* Programs Grid */}
       <section className="prog-grid-section">
         <div className="prog-grid-inner">
-          <div className="prog-grid">
-            {programs.map((program, index) => (
-              <ProgramCard key={program.id} {...program} index={index} />
-            ))}
-          </div>
+          {filteredPrograms.length === 0 ? (
+            <div className="no-results">
+              No programs found in this category. Please try another category.
+            </div>
+          ) : (
+            <div className="prog-grid">
+              {filteredPrograms.map((program, index) => (
+                <ProgramCard key={program.id} {...program} index={index} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -247,7 +344,7 @@ export default function ProgramsPage() {
           <div className="approach-grid">
             {approachItems.map((item, i) => (
               <div key={i} className="approach-card">
-                <div className="approach-icon" style={{ background: item.bg }}>
+                <div className={`approach-icon bg-gradient-to-br ${item.gradientClass}`}>
                   <item.icon size={26} color="white" />
                 </div>
                 <div className="approach-title">{item.title}</div>
@@ -259,7 +356,7 @@ export default function ProgramsPage() {
       </section>
 
       <CTASection
-        title="Partner With Our Programs"
+        title="Together for a Better Tomorrow"
         subtitle="Corporations, institutions, and individuals can partner with us to co-create and fund programs that align with your CSR or philanthropic goals."
         primaryLabel="Get in Touch"
         primaryHref="/contact"

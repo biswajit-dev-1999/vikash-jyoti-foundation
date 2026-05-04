@@ -1,16 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, Users, TreePine, Baby, GraduationCap, CheckCircle } from "lucide-react";
 import Link from "next/link";
-
-const iconMap: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
-  Heart, Users, TreePine, Baby, GraduationCap,
-};
+import Image from "next/image";
 
 interface ProgramCardProps {
   title: string;
-  icon: string;
   shortDesc: string;
   highlights: string[];
   color: string;
@@ -18,6 +13,8 @@ interface ProgramCardProps {
   borderColor: string;
   textColor: string;
   index?: number;
+  imageUrl?: string; // Optional image URL
+  imageAlt?: string; // Optional image alt text
 }
 
 // Map Tailwind color class strings to actual hex values
@@ -49,10 +46,11 @@ function resolveText(textColor: string): string {
 }
 
 export default function ProgramCard({
-  title, icon, shortDesc, highlights,
+  title, shortDesc, highlights,
   color, bgColor, textColor, index = 0,
+  imageUrl, imageAlt = title,
 }: ProgramCardProps) {
-  const Icon = iconMap[icon] || Heart;
+  // const Icon = iconMap[icon] || Heart;
   const gradient = resolveGradient(color);
   const bg = resolveBg(bgColor);
   const text = resolveText(textColor);
@@ -74,6 +72,20 @@ export default function ProgramCard({
           transform: translateY(-6px);
           box-shadow: 0 24px 48px rgba(22,163,74,0.1);
           border-color: #bbf7d0;
+        }
+        .pcard-image-container {
+          position: relative;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          background: #f3f4f6;
+        }
+        .pcard-image {
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+        .pcard:hover .pcard-image {
+          transform: scale(1.05);
         }
         .pcard-stripe { height: 4px; }
         .pcard-body { padding: 1.75rem; flex: 1; }
@@ -119,22 +131,35 @@ export default function ProgramCard({
       >
         <div className="pcard-stripe" style={{ background: gradient }} />
 
-        <div className="pcard-body">
-          <div className="pcard-icon" style={{ background: gradient }}>
-            <Icon size={26} color="white" />
+        {/* Optional Image Section */}
+        {imageUrl && (
+          <div className="pcard-image-container">
+            <Image
+              src={imageUrl}
+              alt={imageAlt}
+              fill
+              className="pcard-image"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
+        )}
+
+        <div className="pcard-body">
+          {/* <div className="pcard-icon" style={{ background: gradient }}>
+            <Icon size={26} color="white" />
+          </div> */}
 
           <div className="pcard-title">{title}</div>
           <p className="pcard-desc">{shortDesc}</p>
 
-          <ul className="pcard-list">
+          {/* <ul className="pcard-list">
             {highlights.map((h, i) => (
               <li key={i} className="pcard-list-item">
                 <CheckCircle size={15} style={{ color: text, flexShrink: 0, marginTop: "1px" }} />
                 {h}
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
 
         <div className="pcard-footer" style={{ background: bg }}>

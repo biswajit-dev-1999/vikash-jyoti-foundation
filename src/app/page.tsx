@@ -305,7 +305,7 @@ export default function HomePage() {
                 <p className="hero-quote-text">
                   "Every life deserves dignity, care, and opportunity. We exist to make that a reality."
                 </p>
-                <p className="hero-quote-attr">— Vikas Jyoti Foundation Mission</p>
+                <p className="hero-quote-attr">— Vikas Jyoti Foundation</p>
               </div>
 
               <div className="hero-focus-grid">
@@ -416,7 +416,7 @@ export default function HomePage() {
       </section>
 
       {/* ── LEADERSHIP ── */}
-      <section className="leadership-section">
+      {/* <section className="leadership-section">
         <div className="container">
           <div className="section-center">
             <div className="section-tag">Leadership</div>
@@ -432,7 +432,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── IMPACT STATS ── */}
       <section className="impact-section">

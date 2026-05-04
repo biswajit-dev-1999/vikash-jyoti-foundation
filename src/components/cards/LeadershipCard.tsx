@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, User } from "lucide-react";
+import Image from "next/image";
 
 interface LeadershipCardProps {
   name: string;
@@ -9,11 +10,12 @@ interface LeadershipCardProps {
   description: string;
   initials: string;
   color: string;
+  image?: string; // Add image prop
   index?: number;
 }
 
 export default function LeadershipCard({
-  name, role, description, initials, color, index = 0,
+  name, role, description, initials, color, image, index = 0,
 }: LeadershipCardProps) {
   return (
     <>
@@ -35,25 +37,44 @@ export default function LeadershipCard({
           box-shadow: 0 20px 40px rgba(22,163,74,0.12);
           border-color: #bbf7d0;
         }
-        .lcard-avatar-wrap { position: relative; margin-bottom: 1.25rem; }
+        .lcard-avatar-wrap { 
+          position: relative; 
+          margin-bottom: 1.25rem;
+        }
         .lcard-avatar {
-          width: 110px; height: 110px;
+          width: 110px; 
+          height: 110px;
           border-radius: 50%;
-          display: flex; align-items: center; justify-content: center;
+          display: flex; 
+          align-items: center; 
+          justify-content: center;
           color: white;
           font-size: 2rem;
           font-weight: 800;
           transition: transform 0.3s ease;
+          overflow: hidden;
+          position: relative;
         }
         .lcard:hover .lcard-avatar { transform: scale(1.06); }
+        .lcard-avatar-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
         .lcard-badge {
           position: absolute;
-          bottom: -4px; right: -4px;
-          width: 30px; height: 30px;
+          bottom: -4px; 
+          right: -4px;
+          width: 30px; 
+          height: 30px;
           border-radius: 50%;
           background: #16a34a;
-          display: flex; align-items: center; justify-content: center;
+          display: flex; 
+          align-items: center; 
+          justify-content: center;
           box-shadow: 0 2px 8px rgba(22,163,74,0.4);
+          border: 2px solid white;
+          z-index: 2;
         }
         .lcard-name {
           font-size: 1.05rem;
@@ -91,30 +112,42 @@ export default function LeadershipCard({
         <div className="lcard-avatar-wrap">
           <div
             className="lcard-avatar"
-            style={{ background: `linear-gradient(135deg, var(--from), var(--to))` }}
+            style={{ 
+              background: image ? undefined : `linear-gradient(135deg, var(--from), var(--to))`
+            }}
           >
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: color.includes("green-500")
-                  ? "linear-gradient(135deg,#22c55e,#16a34a)"
-                  : color.includes("teal-500")
-                  ? "linear-gradient(135deg,#14b8a6,#0d9488)"
-                  : color.includes("emerald-600")
-                  ? "linear-gradient(135deg,#059669,#10b981)"
-                  : "linear-gradient(135deg,#16a34a,#0d9488)",
-                fontSize: "2rem",
-                fontWeight: 800,
-                color: "white",
-              }}
-            >
-              {initials}
-            </div>
+            {image ? (
+              <Image
+                src={image}
+                alt={name}
+                width={110}
+                height={110}
+                className="lcard-avatar-image"
+              />
+            ) : (
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: color.includes("green-500")
+                    ? "linear-gradient(135deg,#22c55e,#16a34a)"
+                    : color.includes("teal-500")
+                    ? "linear-gradient(135deg,#14b8a6,#0d9488)"
+                    : color.includes("emerald-600")
+                    ? "linear-gradient(135deg,#059669,#10b981)"
+                    : "linear-gradient(135deg,#16a34a,#0d9488)",
+                  fontSize: "2rem",
+                  fontWeight: 800,
+                  color: "white",
+                }}
+              >
+                {initials}
+              </div>
+            )}
           </div>
           <div className="lcard-badge">
             <CheckCircle size={14} color="white" />

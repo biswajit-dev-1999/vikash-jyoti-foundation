@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
-  { href: "/", label: "Home" },
+  
   { href: "/about", label: "About" },
   { href: "/trustees", label: "Trustees" },
   { href: "/programs", label: "Programs" },
@@ -56,27 +57,30 @@ export default function Navbar() {
         @media (min-width: 640px) { .navbar-inner { padding: 0 1.5rem; } }
         @media (min-width: 1024px) { .navbar-inner { padding: 0 2rem; height: 76px; } }
 
-        /* Logo */
+        /* Logo - Fixed */
         .nav-logo {
           display: flex;
           align-items: center;
-          gap: 0.6rem;
           text-decoration: none;
-          flex-shrink: 0;
         }
-        .nav-logo-icon {
-          width: 42px; height: 42px;
-          border-radius: 12px;
-          background: linear-gradient(135deg, #16a34a, #22c55e);
-          display: flex; align-items: center; justify-content: center;
-          box-shadow: 0 4px 12px rgba(22,163,74,0.25);
-          flex-shrink: 0;
-          transition: box-shadow 0.2s;
+        
+        .nav-logo-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        .nav-logo:hover .nav-logo-icon { box-shadow: 0 6px 20px rgba(22,163,74,0.35); }
-        .nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-        .nav-logo-primary { font-size: 0.85rem; font-weight: 800; color: #15803d; }
-        .nav-logo-secondary { font-size: 0.7rem; font-weight: 600; color: #22c55e; }
+        
+        .nav-logo-image {
+          height: 40px;
+          width: auto;
+          object-fit: contain;
+        }
+        
+        @media (min-width: 1024px) {
+          .nav-logo-image {
+            height: 48px;
+          }
+        }
 
         /* Desktop nav */
         .desktop-nav {
@@ -182,14 +186,17 @@ export default function Navbar() {
 
       <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-inner">
-          {/* Logo */}
+          {/* Logo - Fixed */}
           <Link href="/" className="nav-logo">
-            <div className="nav-logo-icon">
-              <Heart size={18} color="white" fill="white" />
-            </div>
-            <div className="nav-logo-text">
-              <span className="nav-logo-primary">Vikas Jyoti</span>
-              <span className="nav-logo-secondary">Foundation</span>
+            <div className="nav-logo-container">
+              <Image
+                src="/LOGO.jpeg"
+                alt="Vikas Jyoti Foundation Logo"
+                width={160}
+                height={40}
+                className="nav-logo-image"
+                priority
+              />
             </div>
           </Link>
 
