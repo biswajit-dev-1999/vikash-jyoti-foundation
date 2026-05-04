@@ -162,11 +162,11 @@ export default function ProgramCard({
           </ul> */}
         </div>
 
-        <div className="pcard-footer" style={{ background: bg }}>
+        {/* <div className="pcard-footer" style={{ background: bg }}>
           <Link href="/programs" className="pcard-link" style={{ color: text }}>
             Learn more →
           </Link>
-        </div>
+        </div> */}
       </motion.div>
     </>
   );

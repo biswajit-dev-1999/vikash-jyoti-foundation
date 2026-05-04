@@ -78,7 +78,7 @@ export default function Navbar() {
         
         @media (min-width: 1024px) {
           .nav-logo-image {
-            height: 48px;
+            height: 65px;
           }
         }
 
