@@ -32,7 +32,7 @@ export const trustees = [
   {
     id: 4,
     name: "Sudeshna Satpathy",
-    role: "Trustee – Development Professional",
+    role: "Development Professional",
     description:
       "With deep grassroots experience in development, Sudeshna champions community-led approaches to healthcare access, education, and women's rights.",
     image: "/Sudeshna-Satpathy.jpeg",
