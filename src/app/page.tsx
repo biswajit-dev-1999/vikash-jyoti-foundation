@@ -347,10 +347,10 @@ export default function HomePage() {
               <div className="section-tag">About Us</div>
               <h2 className="section-h2">Who We Are</h2>
               <p style={{ color: "#4b5563", lineHeight: 1.8, marginBottom: "1rem" }}>
-                Vikas Jyoti Foundation is a registered NGO based in Odisha, India. Founded with a vision to create an equitable and inclusive society, we uplift marginalized communities through targeted interventions in healthcare, education, and rural livelihoods.
+                Vikas Jyoti Foundation is a registered NGO based in Odisha, India. Founded with a vision to create an equitable and inclusive society, we uplift marginalized communities through targeted interventions in healthcare, education, education, women & children empowerment and disability support.
               </p>
               <p style={{ color: "#4b5563", lineHeight: 1.8, marginBottom: "1.75rem" }}>
-                Our diverse team — disability advocates, government officers, social workers, and rural specialists — brings a multidisciplinary approach to community development.
+                Our diverse team — disability advocates, government officers, social workers — brings a multidisciplinary approach to community development.
               </p>
 
               <div className="checks-grid">

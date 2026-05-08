@@ -128,7 +128,7 @@ export default function DonatePage() {
               Donate to <span style={{ color: "#15803d" }}>Vikas Jyoti</span>
             </h1>
             <p className="donate-hero-sub">
-              Your contribution directly funds healthcare, education, and rural development programs across Odisha.
+              Your contribution directly funds healthcare, education, women & child and disability support programs across Odisha.
             </p>
           </div>
         </section>

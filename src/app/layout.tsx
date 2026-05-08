@@ -9,14 +9,13 @@ export const metadata: Metadata = {
     template: "%s | Vikas Jyoti Foundation",
   },
   description:
-    "Vikas Jyoti Foundation is a registered NGO working in healthcare, rural development, disability support, women empowerment, and education across Odisha.",
+    "Vikas Jyoti Foundation is a registered NGO working in healthcare, disability support, women&child empowerment, and education across Odisha.",
   keywords: [
     "NGO Odisha",
     "Vikas Jyoti Foundation",
-    "rural development",
     "disability support",
     "healthcare camps",
-    "women empowerment",
+    "women&child empowerment",
     "donate NGO India",
   ],
   openGraph: {

@@ -8,7 +8,7 @@ import {
 export const metadata: Metadata = {
   title: "Our Impact",
   description:
-    "Discover the real-world impact Vikas Jyoti Foundation has made through healthcare camps, disability support, rural development, and education programs.",
+    "Discover the real-world impact Vikas Jyoti Foundation has made through healthcare camps, disability support, women & children, and education programs.",
 };
 
 // Resolve icon names from data strings

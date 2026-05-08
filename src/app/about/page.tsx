@@ -199,10 +199,10 @@ export default function AboutPage() {
               Who We Are
             </h2>
             <p style={{ color: "#4b5563", lineHeight: 1.8, marginBottom: "1rem", fontSize: "0.95rem" }}>
-              Vikas Jyoti Foundation is a registered non-governmental organization based in Odisha, India. Founded with the vision of creating an equitable and inclusive society, we work tirelessly to uplift the marginalized through targeted interventions in healthcare, education, and rural livelihoods.
+              Vikas Jyoti Foundation is a registered non-governmental organization based in Odisha, India. Founded with the vision of creating an equitable and inclusive society, we work tirelessly to uplift the marginalized through targeted interventions in healthcare, education, women & children empowerment and disability support.
             </p>
             <p style={{ color: "#4b5563", lineHeight: 1.8, marginBottom: "1.75rem", fontSize: "0.95rem" }}>
-              Our diverse team of trustees — including disability advocates, government officers, social workers, and rural development specialists — brings a multidisciplinary approach to community development.
+              Our diverse team — including disability advocates, government officers, social workers — brings a multidisciplinary approach to community development.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.625rem", marginBottom: "1.75rem" }}>
               {["Registered Non-Profit","Grassroots Approach","Transparent Governance","Community-First"].map((item) => (
@@ -252,7 +252,7 @@ export default function AboutPage() {
               },
               {
                 icon: Compass, title: "Our Mission",
-                text: "To empower underserved communities in Odisha through targeted, community-driven programs in healthcare, disability support, rural development, women empowerment, and education — with transparency, compassion, and respect.",
+                text: "To empower underserved communities in Odisha through targeted, community-driven programs in healthcare, disability support,women&child empowerment, and education — with transparency, compassion, and respect.",
                 bg: "linear-gradient(135deg,#0d9488,#16a34a)",
               },
             ].map((item) => (
@@ -279,7 +279,7 @@ export default function AboutPage() {
             {[
               { title: "Compassion", desc: "We lead with empathy, treating every beneficiary with dignity and respect." },
               { title: "Transparency", desc: "Open books, honest reporting, and full accountability to our donors and community." },
-              { title: "Inclusion", desc: "We serve the most marginalized — the disabled, the rural poor, and the underserved." },
+              { title: "Inclusion", desc: "We serve the most marginalized — the disabled and the underserved." },
               { title: "Empowerment", desc: "We don't give aid — we build capacity and create lasting self-reliance." },
               { title: "Collaboration", desc: "We work with government, civil society, and communities as equal partners." },
               { title: "Excellence", desc: "We hold ourselves to the highest standards in program design, delivery, and impact." },
@@ -306,7 +306,7 @@ export default function AboutPage() {
           <div className="timeline-list">
             {[
               { year: "Est.", title: "NGO Established", desc: "Vikas Jyoti Foundation registered with a vision to serve Odisha's underserved communities." },
-              { year: "Early", title: "First Health Camp", desc: "Launched our first mobile health camp reaching 500+ villagers in rural Kendrapara." },
+              { year: "Early", title: "First Health Camp", desc: "Launched our first mobile health camp reaching 500+ villagers in  Kendrapara." },
               { year: "Growth", title: "Disability Program Launch", desc: "Began distributing assistive devices and conducting disability certification drives." },
               { year: "Scale", title: "Women Empowerment Drive", desc: "Launched self-help groups and skill development programs for women across 10 villages." },
               { year: "Today", title: "5,000+ Lives Impacted", desc: "Continuing to grow our reach and deepen impact across multiple districts of Odisha." },

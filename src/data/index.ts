@@ -4,7 +4,7 @@ export const trustees = [
     name: "Jitendra Kumar Biswal",
     role: "Founder & Disability Advocate",
     description:
-      "A passionate disability rights advocate with over a decade of field experience working with differently-abled communities in rural Odisha. He leads the foundation's flagship disability support programs.",
+      "A passionate disability rights advocate with over a decade of field experience working with differently-abled communities in Odisha. He leads the foundation's flagship disability support programs.",
     image: "/Jitendra-Kumar.jpeg",
     initials: "JB",
     color: "from-green-500 to-emerald-600",
@@ -14,7 +14,7 @@ export const trustees = [
     name: "Bismaya Mahapatra",
     role: "Trustee – MBA, Social Work",
     description:
-      "An MBA graduate specializing in social enterprise management. Bismaya drives the foundation's women empowerment and rural livelihood initiatives with strategic precision.",
+      "An MBA graduate specializing in social enterprise management. Bismaya drives the foundation's women empowerment and livelihood initiatives with strategic precision.",
     image: "/Bismaya-Mahapatra.png",
     initials: "BM",
     color: "from-teal-500 to-green-600",
@@ -24,7 +24,7 @@ export const trustees = [
     name: "Dr. Arabinda Ray",
     role: "Trustee – Government Officer (Agriculture)",
     description:
-      "A senior government officer in the Agriculture department, Dr. Ray brings institutional expertise to the foundation's rural development and food security programs.",
+      "A senior government officer in the Agriculture department, Dr. Ray brings institutional expertise to the foundation's and food security programs.",
     image: "/Arabinda-Ray.jpeg",
     initials: "AR",
     color: "from-emerald-600 to-lime-600",
@@ -32,9 +32,9 @@ export const trustees = [
   {
     id: 4,
     name: "Sudeshna Satpathy",
-    role: "Trustee – Rural Development Professional",
+    role: "Trustee – Development Professional",
     description:
-      "With deep grassroots experience in rural development, Sudeshna champions community-led approaches to healthcare access, education, and women's rights.",
+      "With deep grassroots experience in development, Sudeshna champions community-led approaches to healthcare access, education, and women's rights.",
     image: "/Sudeshna-Satpathy.jpeg",
     initials: "SS",
     color: "from-green-600 to-teal-600",
@@ -47,7 +47,7 @@ export const programs = [
     
     shortDesc: "Free health camps, medical check-ups, and awareness drives in underserved communities.",
     description:
-      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care for rural and tribal communities.",
+      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care  and tribal communities.",
     highlights: [
       "Monthly mobile health camps",
       "Eye & dental care programs",
@@ -85,7 +85,7 @@ export const programs = [
     id: 3,
     title: "Rural Development",
     
-    shortDesc: "Building sustainable livelihoods and community infrastructure in rural villages.",
+    shortDesc: "Building sustainable livelihoods and community infrastructure in villages.",
     description:
       "From clean drinking water access to sustainable farming techniques, we work with village communities to improve quality of life through participatory development programs.",
     highlights: [
@@ -148,7 +148,7 @@ export const programs = [
     
     shortDesc: "Free health camps, medical check-ups, and awareness drives in underserved communities.",
     description:
-      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care for rural and tribal communities.",
+      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care and tribal communities.",
     highlights: [
       "Monthly mobile health camps",
       "Eye & dental care programs",
@@ -168,7 +168,7 @@ export const programs = [
     
     shortDesc: "Free health camps, medical check-ups, and awareness drives in underserved communities.",
     description:
-      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care for rural and tribal communities.",
+      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care and tribal communities.",
     highlights: [
       "Monthly mobile health camps",
       "Eye & dental care programs",
@@ -188,7 +188,7 @@ export const programs = [
     
     shortDesc: "Free health camps, medical check-ups, and awareness drives in underserved communities.",
     description:
-      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care for rural and tribal communities.",
+      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care and tribal communities.",
     highlights: [
       "Monthly mobile health camps",
       "Eye & dental care programs",
@@ -208,7 +208,7 @@ export const programs = [
     
     shortDesc: "Free health camps, medical check-ups, and awareness drives in underserved communities.",
     description:
-      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care for rural and tribal communities.",
+      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care  and tribal communities.",
     highlights: [
       "Monthly mobile health camps",
       "Eye & dental care programs",
@@ -228,7 +228,7 @@ export const programs = [
     
     shortDesc: "Free health camps, medical check-ups, and awareness drives in underserved communities.",
     description:
-      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care for rural and tribal communities.",
+      "We organize free health camps, eye check-ups, dental care drives, and awareness sessions on nutrition, hygiene, and preventive care and tribal communities.",
     highlights: [
       "Monthly mobile health camps",
       "Eye & dental care programs",
