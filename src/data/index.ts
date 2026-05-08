@@ -32,7 +32,7 @@ export const trustees = [
   {
     id: 4,
     name: "Sudeshna Satpathy",
-    role: "Trustee – Rural Development Specialist",
+    role: "Trustee – Rural Development Professional",
     description:
       "With deep grassroots experience in rural development, Sudeshna champions community-led approaches to healthcare access, education, and women's rights.",
     image: "/Sudeshna-Satpathy.jpeg",
@@ -242,66 +242,66 @@ export const programs = [
     imageUrl: "/Health5.png", // Add your image path
     imageAlt: "Healthcare camp serving community",
   },
-  {
-    id: 11,
-    title: "Training",
+  // {
+  //   id: 11,
+  //   title: "Training",
     
-    shortDesc: "Enhancing skills, employability, and self-reliance through training camps.",
-    description:
-      "From clean drinking water access to sustainable farming techniques, we work with village communities to improve quality of life through participatory development programs.",
-    highlights: [
-      "Clean water & sanitation projects",
-      "Sustainable agriculture training",
-      "Village infrastructure support",
-      "Community self-help groups",
-    ],
-    color: "green-400",
-    bgColor: "green",
-    borderColor: "border-green-200",
-    textColor: "green-700",
-    imageUrl: "/Training.png",
-    imageAlt: "Rural community development project",
-  },
-  {
-    id: 12,
-    title: "Training",
+  //   shortDesc: "Enhancing skills, employability, and self-reliance through training camps.",
+  //   description:
+  //     "From clean drinking water access to sustainable farming techniques, we work with village communities to improve quality of life through participatory development programs.",
+  //   highlights: [
+  //     "Clean water & sanitation projects",
+  //     "Sustainable agriculture training",
+  //     "Village infrastructure support",
+  //     "Community self-help groups",
+  //   ],
+  //   color: "green-400",
+  //   bgColor: "green",
+  //   borderColor: "border-green-200",
+  //   textColor: "green-700",
+  //   imageUrl: "/Training.png",
+  //   imageAlt: "Rural community development project",
+  // },
+  // {
+  //   id: 12,
+  //   title: "Training",
     
-    shortDesc: "Enhancing skills, employability, and self-reliance through training camps.",
-    description:
-      "From clean drinking water access to sustainable farming techniques, we work with village communities to improve quality of life through participatory development programs.",
-    highlights: [
-      "Clean water & sanitation projects",
-      "Sustainable agriculture training",
-      "Village infrastructure support",
-      "Community self-help groups",
-    ],
-    color: "red-400",
-    bgColor: "red",
-    borderColor: "border-red-200",
-    textColor: "red-700",
-    imageUrl: "/Training2.png",
-    imageAlt: "Rural community development project",
-  },
-  {
-    id: 13,
-    title: "Training",
+  //   shortDesc: "Enhancing skills, employability, and self-reliance through training camps.",
+  //   description:
+  //     "From clean drinking water access to sustainable farming techniques, we work with village communities to improve quality of life through participatory development programs.",
+  //   highlights: [
+  //     "Clean water & sanitation projects",
+  //     "Sustainable agriculture training",
+  //     "Village infrastructure support",
+  //     "Community self-help groups",
+  //   ],
+  //   color: "red-400",
+  //   bgColor: "red",
+  //   borderColor: "border-red-200",
+  //   textColor: "red-700",
+  //   imageUrl: "/Training2.png",
+  //   imageAlt: "Rural community development project",
+  // },
+  // {
+  //   id: 13,
+  //   title: "Training",
     
-    shortDesc: "Enhancing skills, employability, and self-reliance through training camps.",
-    description:
-      "From clean drinking water access to sustainable farming techniques, we work with village communities to improve quality of life through participatory development programs.",
-    highlights: [
-      "Clean water & sanitation projects",
-      "Sustainable agriculture training",
-      "Village infrastructure support",
-      "Community self-help groups",
-    ],
-    color: "green-400",
-    bgColor: "green",
-    borderColor: "border-green-200",
-    textColor: "green-700",
-    imageUrl: "/Training3.png",
-    imageAlt: "Rural community development project",
-  },
+  //   shortDesc: "Enhancing skills, employability, and self-reliance through training camps.",
+  //   description:
+  //     "From clean drinking water access to sustainable farming techniques, we work with village communities to improve quality of life through participatory development programs.",
+  //   highlights: [
+  //     "Clean water & sanitation projects",
+  //     "Sustainable agriculture training",
+  //     "Village infrastructure support",
+  //     "Community self-help groups",
+  //   ],
+  //   color: "green-400",
+  //   bgColor: "green",
+  //   borderColor: "border-green-200",
+  //   textColor: "green-700",
+  //   imageUrl: "/Training3.png",
+  //   imageAlt: "Rural community development project",
+  // },
 ];
 
 export const impactStats = [

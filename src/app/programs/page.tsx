@@ -34,16 +34,16 @@ const approachItems = [
 ];
 
 // Define categories based on program titles
-const CATEGORIES = ["All", "Healthcare", "Disability", "Rural", "Women & Child", "Education","Training"];
+const CATEGORIES = ["All", "Healthcare", "Disability Support", "Women & Children", "Education"];
 
 // Map program titles to categories
 const getProgramCategory = (title: string): string => {
   if (title.includes("Healthcare")) return "Healthcare";
   if (title.includes("Disability")) return "Disability";
-  if (title.includes("Rural")) return "Rural";
-  if (title.includes("Women")) return "Women & Child";
+  // if (title.includes("Rural")) return "Rural";
+  if (title.includes("Women")) return "Women & Children";
   if (title.includes("Education")) return "Education";
-  if (title.includes("Training")) return "Training";
+  // if (title.includes("Training")) return "Training";
   return "Other";
 };
 

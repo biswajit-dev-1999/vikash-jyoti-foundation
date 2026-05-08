@@ -88,7 +88,7 @@ export default function LeadershipCard({
           display: inline-block;
           padding: 0.25rem 0.75rem;
           background: #f0fdf4;
-          color: #15803d;
+          color: #BAB86C;
           font-size: 0.72rem;
           font-weight: 700;
           border-radius: 9999px;

@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  Heart, ArrowRight, Users, TreePine, GraduationCap,
-  MapPin, Star, CheckCircle, Quote
+  Heart, ArrowRight, Users, UserRound, GraduationCap,
+  MapPin, Star, CheckCircle, Quote,
+  UserRoundCheckIcon
 } from "lucide-react";
 import ProgramCard from "@/components/cards/ProgramCard";
 import LeadershipCard from "@/components/cards/LeadershipCard";
@@ -251,10 +252,10 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="pill" style={{ marginBottom: "1.25rem" }}>
+            {/* <div className="pill" style={{ marginBottom: "1.25rem" }}>
               <Heart size={14} fill="currentColor" />
               Registered NGO • Odisha, India
-            </div>
+            </div> */}
 
             <h1 className="hero-title" style={{ color: "#111827" }}>
               Illuminating{" "}
@@ -265,7 +266,7 @@ export default function HomePage() {
             </h1>
 
             <p className="hero-sub" style={{ color: "#4b5563" }}>
-              Vikas Jyoti Foundation works at the grassroots to uplift underserved communities through healthcare, education, rural development, and disability support across Odisha.
+              Vikas Jyoti Foundation works at the grassroots to uplift underserved communities through healthcare, education, Women & Children, and disability support across Odisha.
             </p>
 
             <div className="hero-btns">
@@ -312,7 +313,7 @@ export default function HomePage() {
                 {[
                   { icon: Heart, label: "Healthcare", bg: "#fef2f2", color: "#ef4444" },
                   { icon: Users, label: "Disability Support", bg: "#f5f3ff", color: "#8b5cf6" },
-                  { icon: TreePine, label: "Rural Dev", bg: "#f0fdf4", color: "#16a34a" },
+                  { icon: UserRound, label: "Women & Children", bg: "#f0fdf4", color: "#16a34a" },
                   { icon: GraduationCap, label: "Education", bg: "#eff6ff", color: "#3b82f6" },
                 ].map(({ icon: Icon, label, bg, color }) => (
                   <div className="hero-focus-item" key={label}>
@@ -349,7 +350,7 @@ export default function HomePage() {
                 Vikas Jyoti Foundation is a registered NGO based in Odisha, India. Founded with a vision to create an equitable and inclusive society, we uplift marginalized communities through targeted interventions in healthcare, education, and rural livelihoods.
               </p>
               <p style={{ color: "#4b5563", lineHeight: 1.8, marginBottom: "1.75rem" }}>
-                Our diverse team of trustees — disability advocates, government officers, social workers, and rural specialists — brings a multidisciplinary approach to community development.
+                Our diverse team — disability advocates, government officers, social workers, and rural specialists — brings a multidisciplinary approach to community development.
               </p>
 
               <div className="checks-grid">

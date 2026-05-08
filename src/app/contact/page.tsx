@@ -229,7 +229,7 @@ export default function ContactPage() {
 
             {[
               { icon: MapPin, title: "Our Location", val: "Odisha, India", sub: "Serving communities across multiple districts", bg: "linear-gradient(135deg,#16a34a,#22c55e)" },
-              { icon: Phone, title: "Call Us", val: "+91 99999 99999", sub: "Mon–Sat, 9:00 AM – 6:00 PM IST", bg: "linear-gradient(135deg,#0d9488,#16a34a)" },
+              { icon: Phone, title: "Call Us", val: "+91 94370 20683", sub: "Mon–Sat, 9:00 AM – 6:00 PM IST", bg: "linear-gradient(135deg,#0d9488,#16a34a)" },
               { icon: Mail, title: "Email Us", val: "info@vikasjyoti.org", sub: "We reply within 24-48 hours", bg: "linear-gradient(135deg,#059669,#10b981)" },
               { icon: Clock, title: "Office Hours", val: "Mon – Saturday", sub: "9:00 AM – 6:00 PM IST", bg: "linear-gradient(135deg,#15803d,#0d9488)" },
             ].map((item) => (
